@@ -19,7 +19,7 @@ int main(void)
 
 	/* print condition for the generated random number */
 	if (n > 0)
-		printf("%i is positve\n", n);
+		printf("%i is positive\n", n);
 	else if (n == 0)
 		printf("%i is zero\n", n);
 	else if (n < 0)
