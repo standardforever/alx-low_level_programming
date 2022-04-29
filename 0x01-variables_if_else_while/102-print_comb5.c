@@ -32,8 +32,9 @@ int main(void)
 					putchar(k);
 					putchar(l);
        				/* Don't print ',' & ' ' at the last count*/
-					if (j == 56)
-						break;
+					if (i == 57 && j == 56)
+						if (k == 57 && l == 57)
+							break;
 					putchar(',');
 					putchar(' ');
 				}
