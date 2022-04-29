@@ -1,0 +1,54 @@
+#include "main.h"
+
+/**
+ * long_value - print numbers greater than  9 with putchar
+ * @val: the number
+ * Return: nothing
+ */
+void long_value(int val)
+{
+	if (val / 10)
+		long_value(val / 10);
+	/* print the last digit */
+	_putchar(val % 10 + '0');
+}
+
+/**
+ * print_times_table(int n)
+ * @n: the number of times table to be printed
+ * Return: nothing
+ */
+void print_times_table(int n)
+{
+	int i, j, count;
+
+	if (n >= 0 && n <= 15)
+	{
+		for (i = 0; i <= 9; i++)
+		{
+			for (count = 0; count <= 9; count++)
+			{
+				j = i;
+				j *= count;
+				if (j <= 9)
+				{
+					_putchar(j + '0');
+					if (count == 9)
+						break;
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				if (j > 9)
+				{
+					long_value(j);
+					if (count == 9)
+						break;
+					_putchar(',');
+					_putchar(' ');
+				}
+			}
+			_putchar('\n');
+		}
+	}
+}
