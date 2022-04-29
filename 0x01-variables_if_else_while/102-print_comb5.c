@@ -13,25 +13,26 @@ int main(void)
 	int i, j;
 
 	/* set the range of value for (1st, 2nd, 3rd, 4th)digit */
-	for (i = 0; i <= 100; i++)
+	for (i = 0; i < 100; i++)
 	{
-		for (j = 0; j <= 100; j++)
+		for (j = 0; j < 100; j++)
 		{
 			/* check if (i is less than j) digit */
 			/*if YES print the digit*/
 			if (i < j)
 			{
-				putchar((i / 10) + '0');
-				putchar((i % 10) + '0');
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
 				putchar(' ');
-				putchar((j / 10) + '0');
-				putchar((j / 10) + '0');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				/* Don't print ',' & ' ' at the last counts*/
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			/* Don't print ',' & ' ' at the last counts*/
-			if (i != 98 || j != 99)
-				break;
-			putchar(',');
-			putchar(' ');
 		}
 	}
 	putchar('\n');
