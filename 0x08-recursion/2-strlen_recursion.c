@@ -1,19 +1,9 @@
 #include "main.h"
-int r;
 
-r = factorial(1);
-printf("%d\n", r);
-r = factorial(5);
-printf("%d\n", r);
-r = factorial(10);
-printf("%d\n", r);
-r = factorial(-1024);
-printf("%d\n", r);
-return (0);
 /**
- * _strlen_recursion -  it returns the length of a string
- * @s: the string lenth to return
- * Return: the length of a string
+ * _strlen_recursion - main - check the code
+ * @s: character of string
+ * Return: Always 0.
  */
 int _strlen_recursion(char *s)
 {
