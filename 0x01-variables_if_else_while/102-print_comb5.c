@@ -17,17 +17,17 @@ int main(void)
 	{
 		for (j = 0; j <= 100; j++)
 		{
-		        /* check if (i is less than j) digit */
+			/* check if (i is less than j) digit */
 			/*if YES print the digit*/
-       			if (i < j)
+			if (i < j)
 			{
 				putchar((i / 10) + '0');
-              			putchar((i % 10) + '0');
-	       			putchar(' ');
+				putchar((i % 10) + '0');
+				putchar(' ');
 				putchar((j / 10) + '0');
-			      	putchar((j / 10) + '0');
+				putchar((j / 10) + '0');
 			}
-			/* Don't print ',' & ' ' at the last count*/
+			/* Don't print ',' & ' ' at the last counts*/
 			if (i != 98 || j != 99)
 				break;
 			putchar(',');
