@@ -17,14 +17,12 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	/* print the conditions for the random number store in n */
-	if (n < 0)
-		n *= -1;
 	y = n % 10;
 	if (y > 5)
 		printf("Last digit of %i is %i and is greater than 5\n", n, y);
 	else if (y == 0)
 		printf("Last digit of %i is %i and is 0\n", n, y);
-	else if (y < 6 && y > 0)
+	else if (y < 6 && y != 0)
 	{
 		printf("Last digit of %i is ", n);
 		printf("%i and is less than 6 and not 0\n", y);
