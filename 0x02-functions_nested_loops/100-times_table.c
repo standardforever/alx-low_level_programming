@@ -14,6 +14,39 @@ void long_value(int val)
 }
 
 /**
+ * space - required space
+ * Return: nothing
+ */
+void space(void)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(' ');
+}
+
+/**
+ * greater_than_100 - if the count is greater than or equal 100
+ * Return: nothing
+ */
+void less_than_100(void)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+}
+
+/**
+ * more_than_100 - count is more than 100
+ * Return: nothing
+ */
+
+void more_than_100(void)
+{
+	_putchar(',');
+	_putchar(' ');
+}
+/**
  * print_times_table(int n)
  * @n: the number of times table to be printed
  * Return: nothing
@@ -28,12 +61,7 @@ void print_times_table(int n)
 		{
 			_putchar('0');
 			if (i != n)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-			}
+				pace();
 		}
 		for (i = 0; i <= n; i++)
 		{
@@ -47,23 +75,17 @@ void print_times_table(int n)
 				}
 				if (j > 0 && j <= 9)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					space();
 					_putchar(j + '0');
 				}
 				if (j > 9 && j < 100)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
+					less_than_100()
 					long_value(j);
 				}
 				if (j >= 100)
 				{
-					_putchar(',');
-					_putchar(' ');
+					more_than_100();
 					long_value(j);
 				}
 			}
