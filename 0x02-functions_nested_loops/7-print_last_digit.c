@@ -10,7 +10,7 @@ int print_last_digit(int n)
 	int a;
 
 	/* check if n is negative if yes multiple by -1*/
-	if (n <= -1)
+	if (n < 0)
 		n *= -1;
 
 	/* check if n divide 10, if remainder is zero the store it in n*/

@@ -17,11 +17,11 @@ int print_last_digit(int n)
 	if (n % 10 == 0)
 	{
 		a = 0;
-		_putchar(a + '0');
+		_putchar('0');
 	}
 
 	/* if n divide 10 is not equal zero store the value in n*/
-	if  (n % 10 != 0)
+	if  (n % 10 > 0)
 	{
 		a = n % 10;
 		_putchar(a + '0');
