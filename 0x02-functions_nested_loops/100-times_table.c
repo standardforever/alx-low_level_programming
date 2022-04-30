@@ -26,7 +26,7 @@ void space(void)
 }
 
 /**
- * greater_than_100 - if the count is greater than or equal 100
+ * less_than_100 - if the count is greater than or equal 100
  * Return: nothing
  */
 void less_than_100(void)
@@ -47,7 +47,7 @@ void more_than_100(void)
 	_putchar(' ');
 }
 /**
- * print_times_table(int n)
+ * print_times_table - print nth times table
  * @n: the number of times table to be printed
  * Return: nothing
  */

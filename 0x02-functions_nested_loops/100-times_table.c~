@@ -26,7 +26,7 @@ void space(void)
 }
 
 /**
- * greater_than_100 - if the count is greater than or equal 100
+ * less_than_100 - if the count is greater than or equal 100
  * Return: nothing
  */
 void less_than_100(void)
@@ -37,7 +37,7 @@ void less_than_100(void)
 }
 
 /**
- * more_than_100 - count is more than 100
+ * more_than__100 - count is more than 100
  * Return: nothing
  */
 
@@ -80,7 +80,7 @@ void print_times_table(int n)
 				}
 				if (j > 9 && j < 100)
 				{
-					less_than_100()
+					less_than_100();
 					long_value(j);
 				}
 				if (j >= 100)
