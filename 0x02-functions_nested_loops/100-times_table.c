@@ -80,7 +80,7 @@ void print_times_table(int n)
 				}
 				if (j > 9 && j < 100)
 				{
-					less_than_100()
+					less_than_100();
 					long_value(j);
 				}
 				if (j >= 100)

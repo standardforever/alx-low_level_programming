@@ -61,7 +61,7 @@ void print_times_table(int n)
 		{
 			_putchar('0');
 			if (i != n)
-				pace();
+				space();
 		}
 		for (i = 0; i <= n; i++)
 		{
