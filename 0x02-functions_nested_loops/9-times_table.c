@@ -16,9 +16,21 @@ void long_value(int val)
 }
 
 /**
+ * space - required space
+ * Return: nothhing
+ */
+void space(void)
+{
+	_putchar(',');
+	_putchar(' ');
+	_puctchar(' ');
+}
+
+/**
  * times_table - print times table starting from 0-9
  * Return: nothing
  */
+
 void times_table(void)
 {
 	int count;
@@ -29,9 +41,7 @@ void times_table(void)
 		_putchar('0');
 		if (i != 9)
 		{
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+			space();
 		}
 	}
 	for (i = 0; i <= 9; i++)
@@ -49,9 +59,7 @@ void times_table(void)
 			/* else send to the long value function */
 			if (j > 0 && j <= 9)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+				space();
 				_putchar(j + '0');
 			}
 			if (j > 9)
@@ -60,7 +68,6 @@ void times_table(void)
 				_putchar(' ');
 				long_value(j);
 			}
-		}
-		_putchar('\n');
-	}
+		}		_putchar('\n');
+								}
 }
