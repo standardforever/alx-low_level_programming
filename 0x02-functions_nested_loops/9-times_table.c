@@ -23,7 +23,7 @@ void space(void)
 {
 	_putchar(',');
 	_putchar(' ');
-	_puctchar(' ');
+	_putchar(' ');
 }
 
 /**
@@ -69,5 +69,5 @@ void times_table(void)
 				long_value(j);
 			}
 		}		_putchar('\n');
-								}
+	}
 }
