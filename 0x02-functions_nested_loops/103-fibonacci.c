@@ -15,14 +15,12 @@ int main(void)
 	next = n1 + n2;
 	for (i = 0; i >= 0; i++)
 	{
-		if (next <= 4000000)
-		{
+		if (next < 4000000 && next % 2 == 0)
 			sum = sum + next;
-			n1 = n2;
-			n2 = next;
-			next = n1 + n2;
-		}
-		else
+		n1 = n2;
+		n2 = next;
+		next = n2 + n1;
+		if (next >= 4000000)
 			break;
 	}
 	printf("%li\n", sum);
