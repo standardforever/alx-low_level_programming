@@ -12,6 +12,7 @@ int main(void)
 	n1 = 1;
 	n2 = 1;
 	next_term = n1 + n2;
+	/* loop from 1 to the 50 term */
 	for (i = 1; i <= 50; i++)
 	{
 		if (i == 1)
