@@ -6,10 +6,30 @@
  */
 int main(void)
 {
-	int i, n;
+	int i;
+	long int n1, n2, next_term;
+
+	n1 = 1;
+	n2 = 1;
+	next_term = n1 + n2;
 	for (i = 1; i <= 50; i++)
 	{
-		n = (i-1)
+		if (i == 1)
+		{
+			printf("%li", n1);
+		}
+		else
+		{
+			printf("%li", next_term);
+			n1 = n2;
+			n2 = next_term;
+			next_term = n1 + n2;
+		}
+		if (i == 50)
+			break;
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
+	return (0);
 }
