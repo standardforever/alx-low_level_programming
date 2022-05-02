@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+/**
+ * main - the program multiples two integers
+ * @argc: contains the number of argument enter
+ * @argv: contains the list of the argument
+ * Return: 0
+ */
+int main(int argc, char *argv[])
+{
+	int i, j;
+
+	i = argv[1];
+	j = arg[2];
+	printf("%i", i *= j);
+}
