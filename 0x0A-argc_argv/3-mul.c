@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j;
+	long int i, j;
 
 	if (argc <= 1)
 		printf("%s\n", "Error");
