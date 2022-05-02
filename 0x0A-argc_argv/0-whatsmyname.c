@@ -6,7 +6,7 @@
  * @argv: store the argc command in an array
  * Return: 0
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (!argv[0])
 		printf("%i", argc);
