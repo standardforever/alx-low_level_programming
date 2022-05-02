@@ -6,34 +6,31 @@
  * @argv: contains the input atgument
  * Return: 0
  */
+
+char _isalpha(char c)
+{
+	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+		return("NULL");
+}
 int main(int argc, char *argv[])
 {
 	int i, j;
 
-	if (argc > 0)
+	if (argc == 1)
+		printf("0\n");
+	for (i = 0; i <= argc; i++)
+	{
+		if (_isalpha(argv[i] == "NULL")
+			printf("%s\n", "Error");
+	}
+	if (argc > 1)
 	{
 		j = 0;
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) >= 0 && (atoi(argv[i]) <= 9))
-			{
-				j += atoi(argv[i]);
-			}
-			else
-			{
-				j = 0;
-				break;
-			}
+			j += atoi(argv[i]);
 		}
-	}
-	else
-		printf("0\n");
-	if (j == 0)
-	{
-		printf("%s\n", "Error");
-		return (1);
-	}
-	else if (j > 0)
 		printf("%i\n", j);
+	}
 	return (0);
 }
