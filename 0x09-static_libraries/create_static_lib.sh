@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc *.c > liball.a
+gcc -c -Wall -Werror -Wextra *.c > liball.a
