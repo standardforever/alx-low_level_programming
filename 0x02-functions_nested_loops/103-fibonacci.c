@@ -15,11 +15,15 @@ int main(void)
 	next = n1 + n2;
 	for (i = 0; i >= 0; i++)
 	{
+		/* check if next is even number and */
+		/* next is less than 4 million */
 		if (next < 4000000 && next % 2 == 0)
 			sum = sum + next;
 		n1 = n2;
 		n2 = next;
 		next = n2 + n1;
+
+		/* check if next is greater or equal 4 million */
 		if (next >= 4000000)
 			break;
 	}
