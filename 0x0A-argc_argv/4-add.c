@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	int i, j;
 
-	if (argc > 0)
+	if (argc > 1)
 	{
 		j = 0;
 		for (i = 1; i < argc; i++)
@@ -27,7 +27,10 @@ int main(int argc, char *argv[])
 		}
 	}
 	else
+	{
 		printf("0\n");
+		return (0);
+	}
 	if (j == 0)
 	{
 		printf("%s\n", "Error");
