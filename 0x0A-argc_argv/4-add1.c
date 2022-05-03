@@ -20,7 +20,8 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	for (i = 0; i <= argc; i++)
 	{
-		if (
+		if (_isalpha(argv[i] == "NULL")
+			printf("%s\n", "Error");
 	}
 	if (argc > 1)
 	{

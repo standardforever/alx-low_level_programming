@@ -1,31 +1,34 @@
 #include <stdio.h>
+
 #include <stdlib.h>
+#include <ctype.h>
 /**
- * main - it adds positve numbers
- * @argc: contains the count of the input
- * @argv: contains the input atgument
- * Return: 0
+ * main - adds positive numbers.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i, j, add = 0;
 
+<<<<<<< HEAD
 	if (argc > 1)
+=======
+	for (i = 1; i < argc; i++)
+>>>>>>> a314f9be066ff0a274bfd53c2c28dd0a6d21c1eb
 	{
-		j = 0;
-		for (i = 1; i < argc; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (atoi(argv[i]) >= 0 && (atoi(argv[i]) <= 9))
+			if (!isdigit(argv[i][j]))
 			{
-				j += atoi(argv[i]);
-			}
-			else
-			{
-				j = 0;
-				break;
+				printf("Error\n");
+				return (1);
 			}
 		}
+		add += atoi(argv[i]);
 	}
+<<<<<<< HEAD
 	else
 	{
 		printf("0\n");
@@ -38,5 +41,8 @@ int main(int argc, char *argv[])
 	}
 	else if (j > 0)
 		printf("%i\n", j);
+=======
+	printf("%d\n", add);
+>>>>>>> a314f9be066ff0a274bfd53c2c28dd0a6d21c1eb
 	return (0);
 }
