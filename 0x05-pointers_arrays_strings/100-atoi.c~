@@ -5,7 +5,7 @@
  * @s: it string to be converted
  * Return: if no number return 0 else return the number
  */
-void _atoi(char *s)
+int _atoi(char *s)
 {
 	int i, k;
 	int c = 0;
@@ -31,7 +31,7 @@ void _atoi(char *s)
 		if (k > 0)
 			break;
 	}printf("%c", s[i]);
-	//return (c);
+	return (c);
 }
 int main(void)
 {
