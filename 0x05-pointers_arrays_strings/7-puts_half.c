@@ -16,11 +16,17 @@ void puts_half(char *str)
 		i++;
 	/* divide the length to two */
 	if (i % 2 == 0)
+	{
 		k = i / 2;
+		/* print the last half of the string */
+		for (k = k; k <= i - 1; k++)
+			_putchar(str[k]);
+	}
 	else
-		k = (i - 1) / 2;
-	/* print the last half of the string */
-	for (k; k <= i - 1; k++)
-		_putchar(str[k]);
+	{
+		/*print the last half of the string */
+		for (k = k + 1; k <= i - 1; k++)
+			_putchar(str[k]);
+	}
 	_putchar('\n');
 }
