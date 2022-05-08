@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * puts_half - print the half of a string
  * @str: the string to print
@@ -20,7 +20,8 @@ void puts_half(char *str)
 		k = (i - 1) / 2;
 
 	/* print the last half of the string */
-	for (k = k; k <= i - 1; k++)
+	printf("%i", k);
+	for (k = k; k < i; k++)
 		_putchar(str[k]);
 	_putchar('\n');
 }
