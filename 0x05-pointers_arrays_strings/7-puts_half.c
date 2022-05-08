@@ -24,6 +24,7 @@ void puts_half(char *str)
 	}
 	else
 	{
+		k = (i - 1) / 2;
 		/*print the last half of the string */
 		for (k = k + 1; k <= i - 1; k++)
 			_putchar(str[k]);
