@@ -21,7 +21,7 @@ void puts_half(char *str)
 
 	/* print the last half of the string */
 	printf("%i", k);
-	for (k = k; k < i; k++)
+	for (k = k; str[k] != '\0'; k++)
 		_putchar(str[k]);
 	_putchar('\n');
 }
