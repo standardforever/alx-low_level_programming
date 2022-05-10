@@ -8,7 +8,7 @@
  * @n: the number of byte from s2 that will be concatenated to si
  * Description: if n is greater or equal to the length of s2 use the
  *              entire string s2. if NUll is passed treat as empty string
- * Return: if the function fail it should return NULL, else the returned pointer
+ * Return: if function fail it should return NULL, else the returned pointer
  *        shall point to the newly allocated space in memory, which contains s1
  *        followed by s2 and null terminated.
  */
@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* allocate the required memory using malloc */
 	concat = malloc(sizeof(char) * add);
 	/*concatenate the two strings */
-	for (i = 0; s1[i] !='\0'; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 		concat[i] = s1[i];
 	for (k = 0; k < n; k++, i++)
 		concat[i] = s2[k];
