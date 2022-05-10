@@ -26,20 +26,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* find the lenth of the string */
 	for (i = 0; s1[i] != '\0'; i++)
 		;
-	for (j = 0; j <= n; j++)
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+	/* check if n is greater or equal to s2 */
+	if (n > j)
 	{
-		/* check if n is greater or equal to s2 */
-		if (s2[j] == '\0')
-			break;
+		n = j;
+		/* add the length of the string */
+		add = j + i;
 	}
-	/* add the length of the string */
-	add = j + i;
+	else
+		add = i + n;
 	/* allocate the required memory using malloc */
 	concat = malloc(sizeof(char) * add);
 	/*concatenate the two strings */
 	for (i = 0; s1[i] !='\0'; i++)
 		concat[i] = s1[i];
-	for (k = 0; k < j; k++, i++)
+	for (k = 0; k < n; k++, i++)
 		concat[i] = s2[k];
 	concat[i] = '\0';
 	return (concat);
