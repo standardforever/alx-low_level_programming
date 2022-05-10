@@ -31,9 +31,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* check if n is greater or equal to s2 */
 	if (n > j)
 	{
+		;
 		n = j;
 		/* add the length of the string */
-		add = j + i;
+		add = n + i;
 	}
 	else
 		add = i + n;
