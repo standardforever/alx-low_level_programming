@@ -10,7 +10,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i;
+	unsigned int i, j, k;
 	/* declear a struct dog_t as dog */
 	dog_t *dog;
 
@@ -31,22 +31,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog);
 		return (NULL);
 	}
-	for (i = 0; name[i] != '\0'; i++)
-		dog->name[i] = name[i];
+	for (j = 0; j < i; j++)
+		dog->name[j] = name[j];
 	dog->age = age;
 
 	/* getting the length of name and assign memory for it */
-	for (i = 0; owner[i]; i++)
+	for (k = 0; owner[k]; k++)
 		;
-	i++;
-	dog->owner = malloc(sizeof(char) * i);
+	k++;
+	dog->owner = malloc(sizeof(char) * k);
 	if (dog->owner == NULL)
 	{
 		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
-	for (i = 0; owner[i] != '\0'; i++)
-		dog->owner[i] = owner[i];
+	for (j = 0; j < k; j++)
+		dog->owner[j] = owner[j];
 	return (dog);
 }
