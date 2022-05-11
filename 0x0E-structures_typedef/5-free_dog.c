@@ -3,7 +3,7 @@
 
 /**
  * free_dog - function to free memory
- * @d: is pointer to dog_t
+ * @d: is pointer to dog_t.
  *
  * Return: nothing.
 **/
