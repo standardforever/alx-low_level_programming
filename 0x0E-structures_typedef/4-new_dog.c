@@ -11,17 +11,13 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	unsigned int i, nl, ol;
-	/* declear a struct dog_t as dog */
 	dog_t *dog;
 
-	/* checking if name and owner is not equal null*/
 	if (name == NULL || owner == NULL)
 		return (NULL);
-
-	/* assign the memory allocation of dog */
 	dog = malloc(sizeof(dog_t));
-
-	/* geting the length of name and assign memory for it */
+	if (dog == NULL)
+		return (NULL);
 	for (nl = 0; name[nl]; nl++)
 		;
 	nl++;
