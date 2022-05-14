@@ -18,8 +18,8 @@ char *cap_string(char *s)
 	cr[12] = ')';
 	for (i = 0; s[i]; i++)
 	{
-		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
-			s[i] = s[i] - 32;
+		if (i == 0 && (c[i] >= 'a' && c[i] <= 'z'))
+			c[i] = c[i] - 32;
 		for (j = 0; j < 13; j++)
 		{
 			if (cr[j] == s[i])
