@@ -1,0 +1,29 @@
+#include "main.h"
+
+/**
+ * infinite_add - it adds two numbers
+ * @r:  is the buffer that the function will use to store the result
+ * @size_r: is the buffer size
+ * @n1: the first number which is a string of number
+ * @n2: the second number which is a string of number
+ * Return: a pointer to the result,
+ *         If the result can not be stored in r the function must return 0
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
+{
+	int i;
+
+	if (n1 && n2)
+	{
+		for (i = 0; i < size_r; i++)
+		{
+			r[i] = (n1[i] + n2[i]) - 48;
+		}
+	}
+	for (i = 0; r[i] != '\0'; i++)
+	{
+		;
+		if (
+	}
+	return (r);
+}
