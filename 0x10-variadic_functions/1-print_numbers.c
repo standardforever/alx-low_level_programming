@@ -8,7 +8,6 @@
  * @n: the numbers to be printed
  * Return: nothing
  */
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list op;
@@ -21,6 +20,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (separator != NULL && i < n - 1)
 			printf("%s", separator);
 	}
-	putchar('\n');
+	printf("\n");
 	va_end(op);
 }
