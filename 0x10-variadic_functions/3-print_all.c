@@ -18,7 +18,7 @@ void print_all(const char *const format, ...)
 {
 	int i, j, c;
 	va_list op;
-	char *str = "cisf";
+	char str[] = "cisf";
 
 	va_start(op, format);
 	i = 0, c = 0;
@@ -32,8 +32,9 @@ void print_all(const char *const format, ...)
 				printf(", ");
 				break;
 			}
-		}j++;
-		switch(format[i])
+			j++;
+		}
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(op, int)), c = 1;
@@ -52,7 +53,8 @@ void print_all(const char *const format, ...)
 				}
 				printf("%s", "(nil)");
 				break;
-		}i++;
+		}
+		i++;
 	}
 	printf("\n");
 	va_end(op);
