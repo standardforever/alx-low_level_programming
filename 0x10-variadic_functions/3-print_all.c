@@ -21,13 +21,13 @@ void print_all(const char *const format, ...)
 
 	va_start(op, format);
 	while (format[i] && format)
-	{
-		j = 0;
+	{	j = 0;
 		while (str[j])
 		{
 			if (str[j] == format[i] && c)
 			{
-				printf(", "), break;
+				printf(", ");
+				break;
 			}
 			j++;
 		}

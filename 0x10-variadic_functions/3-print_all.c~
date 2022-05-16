@@ -27,8 +27,7 @@ void print_all(const char *const format, ...)
 		{
 			if (str[j] == format[i] && c)
 			{
-				printf(", ");
-				break;
+				printf(", "), break;
 			}
 			j++;
 		}
