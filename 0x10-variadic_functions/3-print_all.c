@@ -13,15 +13,13 @@
  *     any other char should be ignored
  * @format: is a list of types
  */
-
 void print_all(const char *const format, ...)
 {
-	int i, j, c;
+	int i = 0, j, c = 0;
 	va_list op;
 	char str[] = "cisf";
 
 	va_start(op, format);
-	i = 0, c = 0;
 	while (format[i] && format)
 	{
 		j = 0;
@@ -29,8 +27,7 @@ void print_all(const char *const format, ...)
 		{
 			if (str[j] == format[i] && c)
 			{
-				printf(", ");
-				break;
+				printf(", "), break;
 			}
 			j++;
 		}
