@@ -8,7 +8,6 @@
  * @n: the number of strings to enter
  * Return: nothing
  */
-
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list op;
