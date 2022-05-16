@@ -22,7 +22,6 @@ void print_diagsums(int *a, int size)
 		if (m == j && n >= 0)
 		{
 			i += a[j];
-			printf("%i   ", a[j]);
 			m--, n--;
 			m += size;
 		}

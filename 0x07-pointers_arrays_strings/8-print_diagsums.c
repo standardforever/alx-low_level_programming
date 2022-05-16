@@ -10,7 +10,7 @@ void print_diagsums(int *a, int size)
 {
 	int i, j, k, l, m, n;
 
-	l = 0, k = 0, m = size - 1, i = 0, n = size -1;
+	l = 0, k = 0, m = size - 1, i = 0, n = size - 1;
 	for (j = 0; j < size * size; j++)
 	{
 		if (l == j)
