@@ -1,1 +1,1 @@
-This directory contains task related to Linked_list 
+This directory contains file related to Linked list
