@@ -1,1 +1,1 @@
-This directory contains argc, and argv argument of main function
+This directory contains task related to argument to main fuction (argv, argc)

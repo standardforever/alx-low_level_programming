@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - contains the main block
- * @argc: contains the number of arguments passed to the program
- * @argv: store the argc command in an array
+ * main - contains the main code
+ * @argc: the number of parameters input from terminal
+ * @argv: argument vector
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	if (!argv[0])
-		printf("%i", argc);
+	argc += 0;
 	printf("%s\n", argv[0]);
+
 	return (0);
 }
