@@ -2,7 +2,7 @@
 
 
 /**
- * sqrt - find the square root
+ * sqrt_ - find the square root
  * @a: the integer to finded the square root
  * @b: the number of power
  * Return: 0
