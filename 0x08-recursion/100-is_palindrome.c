@@ -1,54 +1,50 @@
 #include "main.h"
 
 /**
- * long_1 - main - check the code
- * @s: number
- *
- * Return: Always 0.
+ * _strlen - find the length of the string
+ * @s: the string to find the length
+ * Return: the length of the string
  */
 
-int long_1(char *s)
+int _strlen(char *s)
 {
-	if (*s != '\0')
+	int count = 0;
+
+	if (*s)
 	{
-		return (1 + long_1(s + 1));
+		count++;
+		count = count + _strlen(s + 1);
 	}
-	return (0);
-
+	return (count);
 }
+
 /**
- * compare - main - check the code
- * @s: number
- * @l: lenght
- *
- * Return: Always 0.
+ * str - it compares the string from left and right
+ * @len: the length of the string
+ * @s: the string to compare
+ * Return: 1 if true else 0
  */
-int compare(char *s, int l)
+
+int str(char *s, int len)
 {
-	if (l <= 0)
-	{
+	if (len <= 0)
 		return (1);
-	}
-	if (*s == *(s + (l - 1)))
-	{
-		return (compare(s + 1, l - 2));
-	}
+	if (*s == s[len - 1])
+		return (str((s + 1), len - 2));
 	else
-	{
 		return (0);
-	}
 }
 
 /**
- * is_palindrome - main - check the code
- * @s: character
- *
- * Return: Always 0.
+ * is_palindrome - it checks if a string is palindrome
+ * @s: the character to check
+ * Return: 1 if true else 0
  */
+
 int is_palindrome(char *s)
 {
 	int l;
 
-	l = long_1(s);
-	return (compare(s, l));
+	l = _strlen(s);
+	return (str(s, l));
 }

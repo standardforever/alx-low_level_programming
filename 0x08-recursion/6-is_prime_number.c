@@ -1,33 +1,27 @@
 #include "main.h"
 
 /**
- * prime_a - main - check the code
- * @a: number
- * @b: number of power
- * Return: Always 0.
+ * prime - check for the prime number
+ * @a: the prime number
+ * @b: the number of power
+ * Return: 1 if is a prime else 0
  */
 
-int prime_a(int a, int b)
+int prime(int a, int b)
 {
 	if (a <= 1 || (a != b && a % b == 0))
-	{
 		return (0);
-	}
-		else if (a == b)
-	{
+	else if (a == b)
 		return (1);
-	}
-	return (prime_a(a, b + 1));
+	return (prime(a, b + 1));
 }
-
-
 /**
- * is_prime_number - main - check the code
- * @n: number
- *
- * Return: Always 0.
+ * is_prime_number - it returns 1 if the input nuber is a prime
+ * @n: the number to check
+ * Return: 1 if a prime number esle 0
  */
+
 int is_prime_number(int n)
 {
-	return (prime_a(n, 2));
+	return (prime(n, 2));
 }
