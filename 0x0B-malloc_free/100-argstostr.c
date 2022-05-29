@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 		free(ptr);
 		return (NULL);
 	}
-		
+
 	i = 0, count = 0;
 	while (i < ac)
 	{
