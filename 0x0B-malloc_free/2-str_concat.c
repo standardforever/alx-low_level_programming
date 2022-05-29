@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	count += i + 1;
 	/* allocating the memory */
-	ptr = malloc(sizeof(char) * 28);
+	ptr = malloc(sizeof(char) * count);
 	if (ptr == NULL)
 		return (NULL);
 	/* concatenate the string  */
