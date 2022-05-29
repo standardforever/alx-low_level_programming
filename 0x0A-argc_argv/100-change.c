@@ -10,30 +10,34 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, ncoins = 0;
+	int ncent = 0, cent;
 
-	if (argc == 1 || argc > 2)
+	if (argc > 2 || argc <= 1)
 	{
-        	printf("Error\n");
-        	return (1);
+		printf("Error\n");
+		return (1);
 	}
 
-	cents = atoi(argv[1]);
-        while (cents > 0)
-        {
-                if (cents >= 25)
-                        cents -= 25;
-                else if (cents >= 10)
-                        cents -= 10;
-                else if (cents >= 5)
-                        cents -= 5;
-		else if (cents >= 2)
-			cents -= 2;
-		else if (cents >= 1)
-			cents -= 1;
-		ncoins += 1;
-        }
-        printf("%d\n", ncoins);
-        return (0);
-
+	cent = atoi(argv[1]);
+	if (cent < 0)
+	{
+		printf("%i\n", 0);
+		return (0);
+	}
+	while (cent > 0)
+	{
+		if (cent >= 25)
+			cent -= 25;
+		else if (cent >= 10)
+			cent -= 10;
+		else if (cent >= 5)
+			cent -= 5;
+		else if (cent >= 2)
+			cent -= 2;
+		else if (cent >= 1)
+			cent -= 1;
+		ncent++;
+	}
+	printf("%i\n", ncent);
+	return (0);
 }
