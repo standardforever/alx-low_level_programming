@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 		count++;
 		i++;
 	}
-	ptr = malloc(sizeof(char) * count++);
+	ptr = malloc(sizeof(char) * (count + 1));
 	if (ptr == NULL)
 	{
 		free(ptr);
@@ -40,7 +40,8 @@ char *argstostr(int ac, char **av)
 			ptr[count] = av[i][j];
 			j++, count++;
 		}
-		ptr[count] = '\n';
+		if (av[i][j] == '\0')
+			ptr[count] = '\n';
 		count++;
 		i++;
 	}
