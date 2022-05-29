@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - contains the main code
@@ -6,11 +7,18 @@
  * @argv: argument vector
  * Return: 0
  */
- 
+
 int main(int argc, char *argv[])
 {
-	argc += 0;
-	printf("%s\n", argv[0]);
+	int num1, num2;
 
+	if (argc < 2)
+	{
+		printf("Error\n");
+		return (0);
+	}
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	printf("%i\n", num1 * num2);
 	return (0);
 }
