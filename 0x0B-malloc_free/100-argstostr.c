@@ -38,5 +38,6 @@ char *argstostr(int ac, char **av)
 		i++;
 
 	}
+	ptr[count] = '\0';
 	return (ptr);
 }
