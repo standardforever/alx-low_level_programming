@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * main - contains the main code
  * @argc: the number of parameters input from terminal
@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i, add = 0;
+	char *c;
 
 	if (argc - 1 == 0)
 	{
@@ -19,8 +20,9 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
+		c = argv[i];
 
-		if (atoi(argv[i]) == 0)
+		if (isdigit(*c) == 0)
 		{
 			printf("Error\n");
 			return (1);
