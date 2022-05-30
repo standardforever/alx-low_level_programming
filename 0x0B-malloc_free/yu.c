@@ -2,14 +2,20 @@
 
 int main(void)
 {
-    int i, j;
-    char *str[3] = {
-        "start ", "bouww", "abdul"
-    };
-    for (i = 0; i < 3; i++)
+    int i = 0;
+    char *tab = "      ALX School         #cisfun      ";
+    
+    while(*(tab + i))
     {
-        for (j = 0; j < 5; j++)
-            printf("%c\n", *(*(str + i) + j));
+        if (*(tab + i) == ' ')
+        {
+            i++;
+            continue;
+        }
+            
+        printf("%c", *(tab + i));
+        i++;
+        
     }
-    return(0);
+    return (0);
 }
