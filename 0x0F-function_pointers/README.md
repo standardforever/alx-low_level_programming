@@ -1,1 +1,0 @@
-This directory contains task related to C-Function pointers

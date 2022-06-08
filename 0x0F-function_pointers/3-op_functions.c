@@ -1,57 +1,61 @@
+#include "3-calc.h"
+
 /**
- * op_add - Adds two numbers
- * @a: int 1
- * @b: int 2
- * Return: Returns result
-**/
+ * op_add - addition function
+ * @a: int
+ * @b: int
+ * Return: the sum
+ */
+
 int op_add(int a, int b)
 {
-return (a + b);
+	return (a + b);
 }
 
 /**
- * op_sub - subtracts two numbers
- * @a: int 1
- * @b: int 2
- * Return: Returns result
-**/
+ * op_sub - subtration function
+ * @a: int
+ * @b: int
+ * Return: the subtraction
+ */
+
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
 
 /**
- * op_mul - Multiplies two numbers
- * @a: int 1
- * @b: int 2
- * Return: Returns result
-**/
+ * op_mul - multiplication function
+ * @a: int
+ * @b: int
+ * Return: the multiplication
+ */
 
 int op_mul(int a, int b)
 {
-return (a * b);
+	return (a * b);
 }
 
 /**
- * op_div - Divides two numbers
- * @a: int 1
- * @b: int 2
- * Return: Returns result
-**/
+ * op_mod - mudulus function
+ * @a: int
+ * @b: int
+ * Return: the modulus
+ */
+
+int op_mod(int a, int b)
+{
+	return (a % b);
+}
+
+/**
+ * op_div - division function
+ * @a: int
+ * @b: int
+ * Return: the division
+ */
 
 int op_div(int a, int b)
 {
 	return (a / b);
-}
-
-/**
- * op_mod - Modules two numbers
- * @a: int 1
- * @b: int 2
- * Return: Returns result
-**/
-
-int op_mod(int a, int b)
-{
-return (a % b);
 }
