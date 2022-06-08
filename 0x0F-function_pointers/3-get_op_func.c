@@ -2,7 +2,7 @@
 
 /**
  * get_op_func - a function pointer
- * @char: pointer to char
+ * @s: a pointer to the specifier
  * Return: a function
  */
 
