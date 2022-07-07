@@ -125,4 +125,3 @@ int main(int argc, char **argv)
 		printf("%c", keygen[ch]);
 	return (0);
 }
-Footer
