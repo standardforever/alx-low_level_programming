@@ -1,49 +1,51 @@
-# 0x18 C - Dynamic libraries :pencil2:
+# C - Dynamic libraries
 
-> C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. This projects covers dynamic libraries creation and implementation
+In this project, learned about using dynamic libraries in C, including how to create
+them and how to use them with `$LD_LIBRARY_PATH`, `nm`, `ldd`, and `ldconfig`.
 
-At the end of this project, I was able to solve this questions:
-  
-* What is a dynamic library, how does it work, how to create one, and how to use it
-* What is the environment variable $LD_LIBRARY_PATH and how to use it
-* What are the differences between static and shared libraries
-* Basic usage nm, ldd, ldconfig
+## Tests :heavy_check_mark:
 
-## Tasks :heavy_check_mark:
+* [tests](./tests): Folder of test files. Provided by Holberton School.
 
-0. Create the dynamic library libholberton.so.
-1. Create a script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
-2. Create a dynamic library that contains C functions that can be called from Python
-3. Run two commands on the same server where the Giga Millions program runs (101-make_me_win)
+## Tasks :page_with_curl:
 
-## Results :chart_with_upwards_trend:
+* **0. A library is not a luxury but one of the necessities of life**
+  * [libholberton.so](./libholberton.so): C dynamic library containing all the functions
+  listed below:
+    * `int _putchar(char c);`
+    * `int _islower(int c);`
+    * `int _isalpha(int c);`
+    * `int _abs(int n);`
+    * `int _isupper(int c);`
+    * `int _isdigit(int c);`
+    * `int _strlen(char *s);`
+    * `void _puts(char *s);`
+    * `char *_strcpy(char *dest, char *src);`
+    * `int _atoi(char *s);`
+    * `char *_strcat(char *dest, char *src);`
+    * `char *_strncat(char *dest, char *src, int n);`
+    * `char *_strncpy(char *dest, char *src, int n);`
+    * `int _strcmp(char *s1, char *s2);`
+    * `char *_memset(char *s, char b, unsigned int n);`
+    * `char *_memcpy(char *dest, char *src, unsigned int n);`
+    * `char *_strchr(char *s, char c);`
+    * `unsigned int _strspn(char *s, char *accept);`
+    * `char *_strpbrk(char *s, char *accept);`
+    * `char *_strstr(char *haystack, char *needle);`
 
-| Filename |
-| ------ |
-| [holberton.h](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/holberton.h)|
-| [libholberton.so](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/libholberton.so)|
-| [1-create_dynamic_lib.sh](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/1-create_dynamic_lib.sh)|
-| [100-operations.so](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/100-operations.so)|
-| [101-make_me_win.sh](https://github.com/edward0rtiz/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/101-make_me_win.sh)|
+  * [holberton.h](./holberton.h): Header file containing the prototypes of all functions
+  included in `libholberton.so`.
 
-## Additional info :construction:
-### Resources
+* **1. Without libraries what have we? We have no past and no future**
+  * [1-create_dynamic_lib.sh](./1-create_dynamic_lib.sh): Bash script that creates a
+  dynamic library called `liball.so` from all the `.c` files in the current directory.
 
-- GLIBC 2.24
-- gcc 4.8.4
-- betty linter 0.32
-
-
-
-### Try It On Your Machine computer:	
-```bash
-git clone https://github.com/edward0rtiz/holbertonschool-low_level_programming.git
-cd 0x18-dynamic_libraries
-gcc -Wall -pedantic -Werror -Wextra -L. 0-main.c -lholberton -o len
-FOR TASK 1:
-nm -D --defined-only liball.so
-FOR TASK 100:
-python3 100-tests.py 
-FOR TASK 101:
-./101-make_me_win.sh
-```
+* **2. Let's call C functions from Python**
+  * [100-operations.so](./100-operations.so): C dynamic library containing basic C
+  mathematical operation functions that can be called from Python.
+  * Includes:
+    * `int add(int a, int b);`
+    * `int sub(int a, int b);`
+    * `int mul(int a, int b);`
+    * `int div(int a, int b);`
+    * `int mod(int a, int b);`

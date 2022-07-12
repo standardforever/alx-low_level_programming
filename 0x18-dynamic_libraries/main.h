@@ -1,8 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
-
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef __MAIN_H__
+#define __MAIN_H__
 
 int _putchar(char c);
 int _islower(int c);
