@@ -6,10 +6,17 @@
  * @key: it the key you are looking for
  * Return: the value asscoiated with the element, NULL if key couldn't be found
  */
+
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int hash = key_index((const unsigned char *)key, ht->size);
+	unsigned long int hash;
 	hash_node_t *hash_node;
+	
+	if (key == NULL || ht == NULL || strlen(key) == 0
+		|| ht->size == 0)
+		return (NULL);
+
+	hash = key_index((const unsigned char *)key, ht->size);
 
 	hash_node = ht->array[hash];
 	while (hash_node)
