@@ -43,7 +43,7 @@ hash_node_t *create_items(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index;
+	unsigned long int index, i = 0;
 	hash_node_t *new_node, *temp;
 	char *new_value;
 
@@ -55,14 +55,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	temp = ht->array[index];
 	/* check if the key exit, if yes update the value*/
-	if (strcmp(temp->key, key) == 0)
+	while (temp)
 	{
-		new_value = strdup(value);
-		if (new_value == NULL)
-			return (0);
-		free(temp->value);
-		temp->value = new_value;
-		return (1);
+		if (strcmp(temp->key, key) == 0)
+		{
+			new_value = strdup(value);
+			if (new_value == NULL)
+				return (0);
+			free(temp->value);
+			temp->value = new_value;
+			return (1);
+		}
+		temp = temp->next;
 	}
 
 	/* create new items and add it to the table */
