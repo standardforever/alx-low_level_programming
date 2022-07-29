@@ -1,0 +1,1 @@
+This dirctory contains hash table Algorithm
