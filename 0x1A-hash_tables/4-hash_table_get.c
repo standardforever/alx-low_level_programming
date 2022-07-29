@@ -12,8 +12,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int hash;
 	hash_node_t *hash_node;
 
-	if (key == NULL || ht == NULL || strlen(key) == 0
-		|| ht->size == 0)
+	if (key == NULL || ht == NULL || strlen(key) == 0)
 		return (NULL);
 
 	hash = key_index((const unsigned char *)key, ht->size);
