@@ -53,20 +53,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((const unsigned char *)key, ht->size);
 
-	temp = ht->array[i];
+	temp = ht->array[index];
 	/* check if the key exit, if yes update the value*/
-	while (temp)
+	if (strcmp(temp->key, key) == 0)
 	{
-		if (strcmp(temp->key, key) == 0)
-		{
-			new_value = strdup(value);
-			if (new_value == NULL)
-				return (0);
-			free(temp->value);
-			temp->value = new_value;
-			return (1);
-		}
-		temp = temp->next;
+		new_value = strdup(value);
+		if (new_value == NULL)
+			return (0);
+		free(temp->value);
+		temp->value = new_value;
+		return (1);
 	}
 
 	/* create new items and add it to the table */
