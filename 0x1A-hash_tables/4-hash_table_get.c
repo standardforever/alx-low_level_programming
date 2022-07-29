@@ -1,6 +1,11 @@
 #include "hash_tables.h"
 
-
+/**
+ * hash_table_get - it retrieves a value associated with a key
+ * @ht: it the hash table you want to look into
+ * @key: it the key you are looking for
+ * Return: the value asscoiated with the element, NULL if key couldn't be found
+ */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int hash = key_index((const unsigned char *)key, ht->size);
