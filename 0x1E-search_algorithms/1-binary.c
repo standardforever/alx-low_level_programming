@@ -15,7 +15,11 @@ int binary_search(int *array, size_t size, int value)
 	{
 		printf("Search in array:");
 		for (i = left; i < right; i++)
+		{
 			printf(" %i", array[i]);
+			if (i + 1 != right)
+				printf(",");
+		}
 		printf("\n");
 
 		count = (right - left - 1) / 2;
